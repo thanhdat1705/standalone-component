@@ -1,1 +1,28 @@
+@use "@angular/material" as mat;
+@include mat.core();
+
+$standalone-component-primary: mat.define-palette(mat.$indigo-palette);
+$standalone-component-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$standalone-component-warn: mat.define-palette(mat.$red-palette);
+$standalone-component-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $standalone-component-primary,
+      accent: $standalone-component-accent,
+      warn: $standalone-component-warn
+    )
+  )
+);
+
+@include mat.all-component-themes($standalone-component-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
