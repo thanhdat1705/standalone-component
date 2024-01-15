@@ -1,0 +1,18 @@
+<ul>
+  <li (click)="onReload()">
+    <img class="logo" src="assets/images/angular-white-transparent.svg" />NGULAR
+  </li>
+  <li routerLink="/location" routerLinkActive="active">Locations</li>
+  <li routerLink="/about-us" routerLinkActive="active">About Us</li>
+  <li routerLink="/pricing" routerLinkActive="active">Pricing</li>
+</ul>
+
+<div class="grow"></div>
+
+<mat-icon class="text-white" [matMenuTriggerFor]="menu">menu</mat-icon>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/location">Locations</button>
+  <button mat-menu-item>Profile</button>
+  <button mat-menu-item>Setting</button>
+</mat-menu>

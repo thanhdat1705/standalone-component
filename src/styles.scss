@@ -22,7 +22,7 @@ $standalone-component-theme: mat.define-light-theme(
 
 :root {
   --primary-light: #5eead4; // not yet
-  --primary: #f47621;
+  --primary: #3f51b5;
   --primary-dark: #0f766e; // not yet
   --secondary-light: #bae6fd; // not yet
   --secondary: #0ea5e9; // not yet
@@ -105,5 +105,16 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
 }

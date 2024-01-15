@@ -26,6 +26,7 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.scss",
+              "src/assets/styles/grid.scss",
               "src/assets/styles/override-material.scss"
             ],
             "stylePreprocessorOptions": {

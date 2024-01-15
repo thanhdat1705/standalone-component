@@ -46,17 +46,16 @@ mat-checkbox {
 
 mat-form-field {
   --mdc-outlined-text-field-focus-outline-width: 3px;
+  --mat-form-field-container-height: 44px;
 
   .mdc-text-field {
-    border-radius: var(--radius-radi-6, 12px);
+    border-radius: 4px;
     /* shadow/sm */
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
   }
 
-  .mdc-text-field--outlined {
-    --mdc-outlined-text-field-outline-width: 1px;
-    --mdc-outlined-text-field-focus-outline-width: 4px;
-    --mdc-outlined-text-field-container-shape: var(--radius-radi-6, 12px);
+  .mdc-text-field--outlined .mdc-notched-outline__notch {
+    border-right: 0 !important;
   }
 
   .mat-mdc-form-field-error-wrapper {
@@ -105,6 +104,8 @@ mat-form-field {
   }
 
   &.small {
+    // font-size: 14px;
+
     .mat-mdc-form-field-icon-suffix {
       mat-datepicker-toggle {
         padding-right: 4px;

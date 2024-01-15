@@ -1,0 +1,68 @@
+@import "mixins";
+
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 16px;
+  background-color: var(--primary);
+  @include shadow(xs);
+
+  ul {
+    display: inline-flex;
+    color: #ffffffb2;
+
+    li {
+      @apply inline-flex items-center px-3 py-1 rounded-md text-sm;
+      cursor: pointer;
+      position: relative;
+      color: white;
+      font-weight: 600;
+      font-size: 14px;
+      // line-height: 1;
+
+      &.active {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      .logo {
+        height: 26px;
+        margin-right: 6px;
+      }
+    }
+  }
+
+  .menu-button {
+    color: white;
+  }
+}
+
+.menu-panel-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-11);
+  height: 100%;
+
+  button[mat-menu-item] {
+    --mat-menu-item-label-text-size: 22px;
+
+    min-height: 38px;
+  }
+
+  .button-content-wrapper {
+    justify-content: center;
+
+    img {
+      width: 32px;
+    }
+
+    > span {
+      font-size: 22px;
+      font-weight: normal;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+:host {
+  .page-header {
+    @apply flex items-center font-light;
+    min-height: 80px;
+    background-color: var(--primary);
+    color: var(--white);
+
+    span {
+      @apply pl-7 text-2xl;
+    }
+  }
+}
