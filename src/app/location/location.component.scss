@@ -1,12 +1,16 @@
 :host {
   .page-header {
-    @apply flex items-center font-light;
+    @apply flex items-center font-light px-8;
     min-height: 80px;
     background-color: var(--primary);
     color: var(--white);
 
     span {
-      @apply pl-7 text-2xl;
+      @apply text-2xl;
+    }
+
+    button {
+      font-weight: 500;
     }
   }
 }

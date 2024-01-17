@@ -1,10 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { Inject, inject, Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 
 import { APP_CONFIG } from '../app-config/app-config.token';
-import { CommonResponse } from '../utils/interfaces';
-import { AppConfig } from '../app-config/app.config';
-import { environment } from '../../../environments/environment';
+import { CommonResponse, Location } from '../utils/interfaces';
 
 @Injectable({ providedIn: 'root' })
 export class LocationService {
@@ -12,8 +10,32 @@ export class LocationService {
   #appConfig = inject(APP_CONFIG);
 
   getLocations() {
-    return this.#httpClient.get<CommonResponse<any>>(
-      `${this.#appConfig.baseURL}`
+    return this.#httpClient.get<Location[]>(`${this.#appConfig.baseURL}`);
+  }
+
+  getLocationById(id: string) {
+    return this.#httpClient.get<CommonResponse<Location>>(
+      `${this.#appConfig.baseURL}/${id}`
+    );
+  }
+
+  createLocation(location: Location) {
+    return this.#httpClient.post<CommonResponse<Location>>(
+      `${this.#appConfig.baseURL}`,
+      location
+    );
+  }
+
+  updateLocation(location: Location) {
+    return this.#httpClient.put<CommonResponse<Location>>(
+      `${this.#appConfig.baseURL}/${location.id}`,
+      location
+    );
+  }
+
+  deleteLocation(id: string) {
+    return this.#httpClient.delete<CommonResponse<Location>>(
+      `${this.#appConfig.baseURL}/${id}`
     );
   }
 }

@@ -58,10 +58,6 @@ mat-form-field {
     border-right: 0 !important;
   }
 
-  .mat-mdc-form-field-error-wrapper {
-    padding: 0;
-  }
-
   &.mat-mdc-form-field-has-icon-prefix {
     .mdc-notched-outline {
       z-index: 2;
@@ -104,8 +100,6 @@ mat-form-field {
   }
 
   &.small {
-    // font-size: 14px;
-
     .mat-mdc-form-field-icon-suffix {
       mat-datepicker-toggle {
         padding-right: 4px;
@@ -122,198 +116,11 @@ mat-form-field {
     }
 
     .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
-      padding: var(--space-5, 10px) var(--space-7, 16px);
-      padding-left: 0;
+      padding: var(--space-5, 10px) 0;
       min-height: 44px;
 
       input::placeholder {
         color: var(--mode-base-400);
-      }
-    }
-
-    &.remove-bottom {
-      .mat-mdc-form-field-subscript-wrapper {
-        display: none;
-      }
-    }
-
-    mat-select {
-      color: var(--mode-alpha-700);
-      font-weight: 500;
-    }
-
-    .mat-mdc-select-arrow-wrapper {
-      display: none;
-    }
-  }
-
-  &.readonly {
-    .mdc-text-field--outlined {
-      background-color: #e4e4e7;
-      box-shadow: none;
-    }
-
-    .mdc-notched-outline {
-      --mdc-outlined-text-field-hover-outline-color: #e4e4e7 !important;
-      --mdc-outlined-text-field-outline-color: #e4e4e7 !important;
-      z-index: 2;
-    }
-
-    .mat-mdc-form-field-icon-prefix > span[matprefix] {
-      background-color: #f4f4f5;
-      border-top-left-radius: var(--radius-radi-6, 12px);
-      border-bottom-left-radius: var(--radius-radi-6, 12px);
-    }
-  }
-
-  &.w-full {
-    .mat-mdc-form-field-infix {
-      width: 100%;
-    }
-  }
-}
-
-mat-radio-group {
-  --mdc-typography-body2-font-size: 16px;
-
-  display: flex;
-  flex-direction: column;
-  row-gap: var(--space-7);
-
-  mat-radio-button {
-    min-height: 48px;
-    border-radius: 8px;
-    border: 1px solid var(--mode-base-200);
-    outline: 1px solid var(--mode-base-200);
-
-    &:hover {
-      outline: 3px solid var(--brand-selected);
-    }
-
-    &.mat-mdc-radio-checked {
-      background: var(--brand-background);
-      outline: 1px solid var(--brand-active);
-      z-index: 1;
-      border-color: var(--brand-active);
-    }
-  }
-
-  .mdc-form-field {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-
-    & > label {
-      margin-left: 0;
-      padding: var(--space-6);
-      width: 100%;
-    }
-
-    .mdc-radio {
-      width: 24px;
-      height: 24px;
-
-      &__background {
-        width: 24px;
-        height: 24px;
-
-        &:before {
-          background-color: transparent !important;
-        }
-      }
-
-      &__outer-circle {
-        border: 2px solid var(--brand-disabled, rgba(50, 62, 72, 0.1)) !important;
-        background: var(--mode-base-100, #f4f4f5) !important;
-      }
-
-      .mdc-radio__native-control:enabled:checked + .mdc-radio__background {
-        .mdc-radio__inner-circle {
-          border-color: white;
-        }
-
-        .mdc-radio__outer-circle {
-          border-color: var(--mdc-radio-selected-icon-color) !important;
-          border-width: 6px !important;
-          background-color: white !important;
-        }
-      }
-    }
-  }
-
-  .mat-mdc-radio-button .mdc-radio {
-    padding: var(--space-6);
-  }
-
-  &.inline {
-    display: inline-flex;
-    flex-direction: row;
-    height: 44px;
-    color: var(--mode-alpha-700, rgba(50, 62, 72, 0.7));
-
-    mat-radio-button {
-      min-height: 42px;
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      border-radius: 0;
-      padding: 0 var(--space-7, 16px);
-      border: 1px solid var(--mode-base-200, #e4e4e7);
-      cursor: pointer;
-
-      &:first-child {
-        border-radius: 12px 0px 0 12px;
-      }
-
-      &:last-child {
-        border-radius: 0px 12px 12px 0px;
-      }
-
-      &.mat-mdc-radio-checked {
-        border-color: var(--mode-base-600, #52525b);
-        background: var(--mode-base-600, #52525b);
-        outline-color: var(--mode-base-600, #52525b);
-
-        .mdc-label {
-          color: white;
-        }
-      }
-
-      &.mat-primary.mat-mdc-radio-checked {
-        border-color: var(--brand-selected, #fdba72);
-        background: var(--brand-background, #fff6eb);
-        outline-color: var(--brand-selected, #fdba72);
-
-        .mdc-label {
-          color: var(--mode-alpha-900, #323e48);
-        }
-      }
-
-      &:hover {
-        outline-color: var(--mode-base-600, #52525b);
-        outline-width: 1px;
-
-        &.mat-primary {
-          outline-color: var(--brand-selected, #fdba72);
-        }
-      }
-    }
-
-    .mdc-label {
-      cursor: pointer;
-      color: rgba(50, 62, 72, 0.7);
-    }
-
-    .mdc-radio {
-      display: none;
-    }
-
-    .mdc-form-field {
-      width: 100%;
-      text-align: center;
-
-      & > label {
-        padding: 0;
       }
     }
   }
@@ -337,118 +144,25 @@ div.mat-mdc-select-panel {
     padding: 10px 16px;
     color: var(--mode-alpha-700);
   }
-
-  &.mdc-list-item--selected {
-    --mat-option-selected-state-label-text-color: red;
-
-    .mdc-list-item__primary-text {
-      border-radius: var(--radius-radi-6, 12px);
-      border: 2px solid var(--brand-active, #f67416);
-      background: var(--mode-base-00, #fff);
-      color: var(--mode-alpha-900, #323e48) !important;
-    }
-  }
-}
-
-.mat-mdc-tooltip-trigger {
-  line-height: normal;
-
-  &:not(.disabled) {
-    text-underline-offset: 0.2em;
-    text-decoration: underline dashed var(--mode-base-400);
-  }
-}
-
-.mat-mdc-tooltip {
-  .mdc-tooltip__surface {
-    --mdc-plain-tooltip-supporting-text-size: 14px;
-    --mdc-plain-tooltip-container-color: var(--colors-base-900);
-
-    padding: var(--space-4) var(--space-7);
-    max-width: 328px;
-    border-radius: 8px !important;
-  }
 }
 
 .mdc-notched-outline {
   --mdc-outlined-text-field-outline-color: var(--mode-base-200);
 }
 
-.mat-mdc-dialog-container .mdc-dialog__surface {
-  border-radius: var(--radius-radi-6) !important;
-}
+.mat-mdc-dialog-container {
+  .mdc-dialog__surface {
+    border-radius: var(--radius-radi-6) !important;
+  }
 
-mat-tab-group {
-  &.tab-group {
-    &--bordered {
-      --mat-tab-header-active-label-text-color: #323e48;
-      --mat-tab-header-active-focus-label-text-color: #323e48;
-      --mat-tab-header-active-hover-label-text-color: #323e48;
-      --mat-tab-header-inactive-label-text-color: rgba(50, 62, 72, 0.7);
-
-      .mat-mdc-tab-header {
-        --mdc-tab-indicator-active-indicator-height: 0px;
-        --mdc-secondary-navigation-tab-container-height: 40px;
-        --mat-tab-header-label-text-size: 18px;
-        --mat-tab-header-label-text-line-height: 28px;
-        --mat-tab-header-label-text-weight: 600;
-
-        border-radius: 12px;
-        border: 1px solid var(--mode-base-200, #e4e4e7);
-        background: var(--mode-base-100, #f4f4f5);
-        width: fit-content;
-        padding: var(--space-2, 2px);
-
-        .mdc-tab {
-          padding: 0 var(--space-7, 16px);
-
-          &--active {
-            border-radius: 10px;
-            border: 0.5px solid var(--mode-base-200, #e4e4e7);
-            background: var(--mode-base-00, #fff);
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-          }
-        }
-      }
-
-      @include respond(phone) {
-        .mat-mdc-tab-header {
-          --mdc-secondary-navigation-tab-container-height: 32px;
-          --mat-tab-header-label-text-size: 16px;
-        }
-      }
-    }
-
-    &--borderless {
-      .mat-mdc-tab-header {
-        --mdc-secondary-navigation-tab-container-height: auto;
-
-        background: transparent;
-        border: none;
-        padding: 0;
-        overflow: inherit;
-
-        .mdc-tab {
-          padding: 0;
-          border: none;
-          box-shadow: none;
-        }
-      }
-    }
+  .mdc-dialog__title {
+    --mdc-dialog-subhead-size: 20px;
   }
 }
 
 .mat-mdc-form-field-error {
-  margin-top: var(--space-6);
-  display: inline-flex !important;
-  height: 24px;
-  align-items: center;
-  color: var(--brand-destructive-active, #e21d48);
-
-  > svg-icon-sprite {
-    height: 24px;
-    margin-right: 8px;
-  }
+  margin-top: var(--space-2);
+  font-size: 14px;
 }
 
 .form-field-wrapper {
@@ -465,5 +179,12 @@ mat-tab-group {
     color: inherit;
 
     @include shadow(sm);
+  }
+}
+
+.sc-snackbar-container {
+  .mdc-snackbar__surface {
+    background-color: transparent !important;
+    padding-right: 0 !important;
   }
 }

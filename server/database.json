@@ -1,37 +1,37 @@
 {
   "locations": [
     {
-      "id": 0,
+      "id": "0",
       "name": "Acme Fresh Start Housing",
       "city": "Chicago",
-      "state": "IL",
+      "state": "AK",
       "photo": "https://angular.io/assets/images/tutorials/faa/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
-      "availableUnits": 4,
+      "availableUnits": 3,
       "wifi": true,
-      "laundry": true
+      "laundry": false
     },
     {
-      "id": 1,
+      "id": "1",
       "name": "A113 Transitional Housing",
       "city": "Santa Monica",
       "state": "CA",
       "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
-      "availableUnits": 0,
+      "availableUnits": 2,
       "wifi": false,
       "laundry": true
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Warm Beds Housing Support",
       "city": "Juneau",
       "state": "AK",
       "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
-      "availableUnits": 1,
+      "availableUnits": 0,
       "wifi": false,
       "laundry": false
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Homesteady Housing",
       "city": "Chicago",
       "state": "IL",
@@ -41,7 +41,7 @@
       "laundry": false
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Happy Homes Group",
       "city": "Gary",
       "state": "IN",
@@ -51,7 +51,7 @@
       "laundry": false
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Hopeful Apartment Group",
       "city": "Oakland",
       "state": "CA",
@@ -61,7 +61,7 @@
       "laundry": true
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Seriously Safe Towns",
       "city": "Oakland",
       "state": "CA",
@@ -71,7 +71,7 @@
       "laundry": true
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Hopeful Housing Solutions",
       "city": "Oakland",
       "state": "CA",
@@ -81,9 +81,9 @@
       "laundry": true
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Seriously Safe Towns",
-      "city": "Oakland",
+      "city": "Oakland city",
       "state": "CA",
       "photo": "https://angular.io/assets/images/tutorials/faa/saru-robert-9rP3mxf8qWI-unsplash.jpg",
       "availableUnits": 10,
@@ -91,7 +91,7 @@
       "laundry": false
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Capital Safe Towns",
       "city": "Portland",
       "state": "OR",
@@ -99,6 +99,26 @@
       "availableUnits": 6,
       "wifi": true,
       "laundry": true
+    },
+    {
+      "id": "8f7384d5-9e6b-4de5-9d86-3f2179e07be6",
+      "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-GGupkreKwxA-unsplash.jpg",
+      "name": "Green housing",
+      "city": "Berlin",
+      "state": "AK",
+      "availableUnits": "5",
+      "wifi": false,
+      "laundry": false
+    },
+    {
+      "id": "614aef11-b8a6-424c-a17e-5a474afaf386",
+      "name": "Happy Towns",
+      "city": "US",
+      "state": "IL",
+      "availableUnits": "1",
+      "wifi": false,
+      "laundry": false,
+      "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-GGupkreKwxA-unsplash.jpg"
     }
   ]
 }

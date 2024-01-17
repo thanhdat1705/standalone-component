@@ -1,6 +1,12 @@
 :host {
-  .filter {
+  .filter-container {
+    display: flex;
+    gap: 12px;
     margin: 20px 0;
+
+    mat-form-field {
+      width: 300px;
+    }
   }
 
 

@@ -1,34 +1,67 @@
-<div class="filter">
+<div class="filter-container">
   <mat-form-field class="small" appearance="outline" subscriptSizing="dynamic">
-    <mat-label>Name</mat-label>
-    <input matInput placeholder="Name of location" />
+    <mat-label>Search</mat-label>
+    <input
+      matInput
+      placeholder="Search by name or city"
+      [formControl]="searchControl"
+    />
+  </mat-form-field>
+
+  <mat-form-field class="small" appearance="outline" subscriptSizing="dynamic">
+    <mat-label>Sate</mat-label>
+    <mat-select placeholder="Choose state" ngModel="None" (ngModelChange)="onStateChange($event)">
+      <mat-option [value]="'None'">None</mat-option>
+
+      @for (item of LOCATION_STATE; track $index) {
+      <mat-option [value]="item.value">{{ item.viewValue }}</mat-option>
+      }
+    </mat-select>
   </mat-form-field>
 </div>
 
 <table
   mat-table
-  [dataSource]="dataSource"
+  [dataSource]="(locationStore.data$ | async)!"
   matSort
   (matSortChange)="sortChange($event)"
 >
-  <ng-container matColumnDef="position">
-    <th mat-header-cell *matHeaderCellDef>No.</th>
-    <td mat-cell *matCellDef="let element">{{ element.position }}</td>
-  </ng-container>
-
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
     <td mat-cell *matCellDef="let element">{{ element.name }}</td>
   </ng-container>
 
-  <ng-container matColumnDef="weight">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header>Weight</th>
-    <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
+  <ng-container matColumnDef="city">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>City</th>
+    <td mat-cell *matCellDef="let element">{{ element.city }}</td>
   </ng-container>
 
-  <ng-container matColumnDef="symbol">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header>Symbol</th>
-    <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
+  <ng-container matColumnDef="state">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>State</th>
+    <td mat-cell *matCellDef="let element">{{ element.state }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="availableUnits">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Available Units</th>
+    <td mat-cell *matCellDef="let element">{{ element.availableUnits }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let element">
+      <button
+        mat-icon-button
+        [matMenuTriggerFor]="menu"
+        aria-label="Example icon-button with a menu"
+      >
+        <mat-icon>more_vert</mat-icon>
+      </button>
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="onOpenDetails(element)">Detail</button>
+        <button mat-menu-item (click)="onDelete(element.id)">Delete</button>
+      </mat-menu>
+    </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

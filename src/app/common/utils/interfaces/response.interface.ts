@@ -1,7 +1,7 @@
 export interface CommonResponse<T> {
-  message: string;
-  isSuccess: boolean;
-  errorCode: string;
+  // message: string;
+  // isSuccess: boolean;
+  // errorCode: string;
   data: T;
 }
 
