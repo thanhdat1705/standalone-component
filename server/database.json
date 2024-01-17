@@ -76,7 +76,7 @@
       "city": "Oakland",
       "state": "CA",
       "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-GGupkreKwxA-unsplash.jpg",
-      "availableUnits": 2,
+      "availableUnits": 12,
       "wifi": true,
       "laundry": true
     },
@@ -117,6 +117,16 @@
       "state": "IL",
       "availableUnits": "1",
       "wifi": false,
+      "laundry": false,
+      "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-GGupkreKwxA-unsplash.jpg"
+    },
+    {
+      "id": "78917077-0b31-4040-9f40-5b8f8123a3e1",
+      "name": "Red Towns",
+      "city": "Ho Chi Minh",
+      "state": "OR",
+      "availableUnits": "1",
+      "wifi": true,
       "laundry": false,
       "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-GGupkreKwxA-unsplash.jpg"
     }
